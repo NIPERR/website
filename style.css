@@ -10,11 +10,76 @@
     grid-template-columns: repeat(2,1fr);
 }
 
+:root {
+	--day: #f8f8ff;
+	--night: #101214;
+}
+
+@media (prefers-color-scheme: light) {
+	html {
+		background: var(--day);
+        color: #101214;
+	}
+	
+@media (prefers-color-scheme: light) {
+	html {
+		background: var(--day);
+        color: #101214;
+	}
+	
+  a {
+  	color: #101214;
+      text-decoration: underline;
+  }
+
+  a:active {
+  	color: #ffffff;
+    background-color: black;
+  }
+
+  a:hover {
+  	color: #ffffff;
+      background-color: black;
+      
+  }
+}
+
+    @media (prefers-color-scheme: dark) {
+	html {
+		background: var(--night);
+		color: var(--day);
+	}
+  a {
+  	color: #ffffff;
+  	text-decoration: underline;
+      
+  }
+
+  a:active {
+  	color: #000000;
+      background-color: #ffffff;
+  }
+
+  .badge {
+    display: none
+}
+
+.badge-dark {
+	display: center
+}
+
+  a:hover {
+  	color: #000000;
+    background-color: #ffffff;
+  }
+
+
+}
+    
 body{
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background: url(imgs/https://www.pexels.com/video/abstract-video-4990246/);
     background-size: cover;
     color: #7A7C80;
 
