@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'Hack';
+    src: url(/Hack-NF.ttf);
+  }
+  
+  * {
+    font-family: 'Hack', monospace;
+  }
+
+body {
+    background-color: #11111b;
+    color: #f0f0f0;
+    font-family: 'Hack';
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.terminal-window {
+    width: 1300px; /* Increased width */
+    height: 750px; /* Increased height */
+    background-color: #303446;
+    border-radius: 0px;
+    overflow: hidden;
+    box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-header {
+    background-color: #7f849c;
+    padding: 3px;
+    display: flex;
+}
+
+.button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.ascii-art {
+    background-color: #303446;
+    padding: 13px;
+    font-family: ' Hack '
+    white-space: pre;
+    animation: dropDown 0s ease forwards;
+    opacity: 100; /* Initially hidden */
+    transform: translateY(-50px); /* Start position above */
+}
+
+.ascii-art pre {
+    color: #cdd6f4;
+    font-size: 15px;
+}
+
+@keyframes dropDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.terminal-body {
+    padding: 16px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.command-line {
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.command-line span {
+    color: #cdd6f4;
+}
+
+.command-line input {
+    background-color: transparent;
+    caret-color: #cdd6f4;
+    border: none;
+    color: #f0f0f0;
+    font-family: ' Hack '
+    font-size: 16px;
+    outline: none;
+    width: calc(100% - 20px); /* Adjusted width */
+}
+
+.output {
+    margin-top: 10px;
+    white-space: pre-wrap;
+    font-family: ' Hack '
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.animate-drop {
+    animation: dropDown 0.1s ease forwards;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-20px); /* Start position above */
+}
+
+@keyframes dropDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.help-text-container {
+    margin-right: 50px;
+    margin-top: 10px
+}
+
+
